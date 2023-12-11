@@ -2,9 +2,87 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    height: 100vh;
+    display: block;
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Full viewport height */
+    background-color: #B4D7FF;
 }
+
+#titleContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#Title {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 40px;
+}
+
+#nav {
+    list-style: none;
+    font-size: 20px;
+}
+
 .container {
     display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.form input, .form select, .menu-button {
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    font-size: 20px;
+    width: 100%;
+    padding: 4px 20px;
+    border: 2px solid #A6A6A6;
+    border-radius: 4px;
+}
+
+.formTitle {
+    font-size: 30px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+button {
+    font-size: 20px;
+    padding: 4px 20px;
+    border: 2px solid #A6A6A6;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    font-size: 20px;
+    padding: 4px 20px;
+    background-color: #6CADF6;
+    border: 2px solid #6CADF6;
+    border-radius: 4px;
 }

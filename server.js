@@ -38,14 +38,15 @@ app.use(session({
 }));
 
 // Routes
-app.use('/users', userRoutes);
+app.use('/userRoutes', userRoutes);
 app.use('/posts', postRoutes);
 app.use('/comments', commentRoutes);
 // app.use('/logout', logoutRoutes);
 
-app.get('/', (req, res) => res.redirect('/login'));
+app.get('/', (req, res) => res.redirect('/home'));
 app.get('/login', (req, res) => res.render('login', { title: 'TechBlog | Login' }));
 app.get('/signup', (req, res) => res.render('signup', { title: 'TechBlog | Sign' }));
+app.get('/home', (req, res) => res.render('home', { title: 'TechBlog | Home' }));
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

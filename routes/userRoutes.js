@@ -1,20 +1,27 @@
 const express = require('express');
 const router = express.Router();
-const User = require('../models/Users'); // Adjust the path according to your project structure
+const User = require('../models/Users');
 
-// Register a new user
-router.post('/register', async (req, res) => {
-    // Logic to handle user registration
+router.post('/signup', async (req, res) => {
+    const { username, email, password } = req.body;
+
+    try {
+        const newUser = await User.create({
+            username: username,
+            email,
+            password
+        });
+
+        res.status(201).json({ message: 'User created successfully', newUser});
+    } catch (error) {
+        console.error('Signup Error:', error);
+        res.status(500).json({ message: 'Error creating user' });
+    }
 });
 
 // Login a user
 router.post('/login', async (req, res) => {
     // Logic to handle user login
-});
-
-// Get user profile
-router.get('/:userId', async (req, res) => {
-    // Logic to retrieve a user's profile
 });
 
 module.exports = router;

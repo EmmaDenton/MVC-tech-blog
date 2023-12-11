@@ -25,7 +25,7 @@ CREATE TABLE Posts (
 );
 
 
-CREATE TABLE Availability (
+CREATE TABLE Comments (
     id (INT, primary key, auto-increment),
     post_id (INT, foreign key to Posts),
     user_id (INT, foreign key to Users),
